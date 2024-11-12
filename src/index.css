@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  outline:none;
+  text-decoration:none;
+  font-family: Outfit;
+}
+body{
+   height:100vh;
+   width:100%;
+}
+@media screen  and (max-width:410px){
+  .bestCar{
+    font-size: 29px;
+  }
+  .carName{
+    font-size: 22px;
+  }
+  .logoN{
+    font-size: 22px;
+  }
+}
+::-webkit-scrollbar{
+  display: none;
+}
