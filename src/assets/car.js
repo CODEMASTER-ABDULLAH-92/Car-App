@@ -38,9 +38,11 @@ import power from "../assets/power.png";
 import elelric from "../assets/elelric.png";
 import Map from "../assets/Map.png";
 import bigBG from "../assets/bgNew.png";
+import bgi from "../assets/bgi.svg";
 
-export const car = {
+const car = {
   CarBox,
+  bgi,
   bigBG,
   CrossIcon,
   Map,
@@ -81,3 +83,101 @@ export const car = {
   FeacturedCar,
   face,
 };
+
+const feacturedCar = [
+  {
+carImage:featured1,
+company:"Tesla",
+modelName:"Model X",
+price:"$98,599",
+},
+{
+  carImage:featured2,
+  company:"Tesla",
+  modelName:"Model 3",
+  price:"$45,900",
+},
+{
+  carImage:featured3,
+  company:"Audi",
+  modelName:"E-tron",
+  price:"$175,000",
+},
+{
+  carImage:featured5,
+  company:"Porsche",
+  modelName:"BoxSter",
+  price:"$126,000",
+},
+{
+  carImage:featured6,
+  company:"Porsche",
+  modelName:"Panamara",
+  price:"$138,599",
+},
+]
+const proshi = [
+  {
+    company:"Porsche",
+    modelName:"Panamara",
+    carImage:brand1,
+    price:"$138,599",
+    power:"Electric",
+    time:"3.7 sec",
+    speed:"356 km/h",
+  },
+  {
+    company:"Porsche",
+    modelName:"Taycan",
+    carImage:brand3,
+    price:"$144,599",
+    power:"Electric",
+    time:"3.7 sec",
+    speed:"356 km/h",
+  },
+  {
+    company:"Porsche",
+    modelName:"Turbo S Cross",
+    carImage:brand4,
+    price:"$187,599",
+    power:"Electric",
+    time:"3.7 sec",
+    speed:"356 km/h",
+  },
+  {
+    company:"Porsche",
+    modelName:"Cayman",
+    carImage:brand5,
+    price:"$138,599",
+    power:"Electric",
+    time:"3.7 sec",
+    speed:"356 km/h",
+  },
+  {
+    company:"Porsche",
+    modelName:"Turbo S",
+    carImage:brand1,
+    price:"$225,599",
+    power:"Electric",
+    time:"3.7 sec",
+    speed:"356 km/h",
+  }
+]
+const smallIcons = [
+  
+  {
+    company:"Porsche",
+    carImage:Chori,   
+  },
+  {
+    company:"Audi",
+    carImage:ferrariLogo,
+  },
+  {
+    company:"Tesla",
+    carImage:teslaLogo,
+  }
+]
+  
+
+export {feacturedCar, car,smallIcons,proshi}

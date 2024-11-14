@@ -10,6 +10,7 @@
   outline:none;
   text-decoration:none;
   font-family: Outfit;
+  scroll-behavior: smooth;
 }
 body{
    height:100vh;
@@ -28,4 +29,17 @@ body{
 }
 ::-webkit-scrollbar{
   display: none;
+}
+@media screen and (max-width:431px){
+  .blurEffect{
+    left: -230px;
+  }
+}
+@media screen and (max-width:312px){
+  .blurEffect{
+    left: -200px;
+  }
+  .blurEffect2{
+    left: -59px;
+  }
 }

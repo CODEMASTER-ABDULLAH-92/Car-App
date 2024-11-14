@@ -3,7 +3,7 @@ import { car } from '../assets/car'
 
 const About = () => {
   return (
-    <div className='px-[2vw] sm:px-[5vw] md:px-[7vw] lg:px-[9vw] text-white flex lg:flex-row flex-col items-center justify-center lg:items-start gap-16 py-16'>
+    <div className='px-[2vw] sm:px-[5vw] md:px-[7vw] lg:px-[9vw] text-white flex lg:flex-row flex-col items-center justify-center lg:items-start gap-16 py-16' id='about'>
 
 
 <div className="relative">

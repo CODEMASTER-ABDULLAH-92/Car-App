@@ -71,9 +71,6 @@ const Hero = () => {
           alt="Start Button" 
         />
       </div>
-      <a href="http://localhost:5173/add">
-              Create the Post 
-</a>
     </div>
   );
 };

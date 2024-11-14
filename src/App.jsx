@@ -6,7 +6,8 @@ import FeacturedCar from './Component/FeacturedCar'
 import Footer from './Component/Footer'
 import CarLogos from './Component/CarLogos'
 import Subscribe from './Component/Subscribe'
-import Brands from "./Component/Brands"
+import FilteredCar from "./Component/FilteredCar"
+import Porchi from './Component/Porchi'
 const App = () => {
   return (
     <div>
@@ -14,8 +15,9 @@ const App = () => {
       <Nav/>
       <Hero/>
       <About/>
-      <Brands/>
+      <Porchi/>
       <FeacturedCar/>
+      <FilteredCar/>
       <CarLogos/>
       <Subscribe/>
       <Footer/>
