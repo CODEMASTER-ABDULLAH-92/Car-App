@@ -1,28 +1,20 @@
-import React from 'react'
-import Nav from './Component/Nav'
-import Hero from './Component/Hero'
-import About from './Component/About'
-import FeacturedCar from './Component/FeacturedCar'
-import Footer from './Component/Footer'
-import CarLogos from './Component/CarLogos'
-import Subscribe from './Component/Subscribe'
-import FilteredCar from "./Component/FilteredCar"
-import Porchi from './Component/Porchi'
+import React from 'react';
+import Nav from './Component/Nav';
+import Footer from './Component/Footer';
+import Home from './pages/Home';
+import CarDetail from './pages/CarDetail';
+import { Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
-    <div>
-    <div className=' bg-custom-gradient'>
-      <Nav/>
-      <Hero/>
-      <About/>
-      <Porchi/>
-      <FeacturedCar/>
-      <FilteredCar/>
-      <CarLogos/>
-      <Subscribe/>
-      <Footer/>
-    </div>
-    </div>
-  )
-}
-export default App
+
+      <div className="bg-custom-gradient">
+        <Nav />
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/cartDetail/:id' element={<CarDetail />} />
+        </Routes>
+        <Footer />
+      </div>
+  );
+};
+export default App;
