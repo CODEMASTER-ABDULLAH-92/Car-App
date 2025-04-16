@@ -14,8 +14,6 @@ const ContextProvider = (props) => {
     const fetchData = async () => {
         try {
             const response = await axios.get(`${url}/api/car/listCar`);
-
-
             // Ensure response structure matches expectation
             setProchi(response.data.car || []); 
         } catch (error) {
