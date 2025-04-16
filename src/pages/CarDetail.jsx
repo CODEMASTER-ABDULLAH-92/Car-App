@@ -1,25 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { proshi } from '../assets/car';
+import { Context } from '../Context';
 
 const CarDetail = () => {
     const { id } = useParams();
-    const [data, setData] = useState({});
-
+    const { proshi } = useContext(Context);
+    const [data, setData] = useState({}); // 🔹 Start with an empty object
     const fetchData = () => {
-        const car = proshi.find((item) => item._id === id);
-        if (car) setData(car);
+        if (proshi.length > 0) { // 🔹 Only run if proshi is not empty
+            const car = proshi.find((item) => item._id === id);
+            if (car) setData(car);
+        }
     };
-
     useEffect(() => {
         fetchData();
-    }, [id]);
+    }, [id, proshi]); // 🔹 Run when `id` or `proshi` changes
 
+    if (!data._id) {
+        return <p className="text-center text-white">Loading...</p>; // 🔹 Prevents UI from breaking if data is empty
+    }
     return (
         <div className="text-white px-[2vw] sm:px-[5vw] md:px-[7vw] lg:px-[9vw] flex flex-col lg:flex-row justify-center items-start gap-8 mt-10">
             {/* Car Image */}
             <div className="h-[400px] w-full lg:w-[40%] bg-gray-800 rounded-lg shadow-lg overflow-hidden flex items-center justify-center">
-                <img src={data.carImage} className="object-cover w-full h-full" alt={`${data.modelName}`} />
+                <img 
+                    src={data.CarImage?.[0]} 
+                    className="object-cover w-full h-full" 
+                    alt={data.modelName} 
+                />
             </div>
 
             {/* Car Details */}
@@ -40,7 +48,6 @@ const CarDetail = () => {
                     <p><span className="font-bold">Transmission:</span> {data.transmission}</p>
                     <p><span className="font-bold">Range:</span> {data.range}</p>
                 </div>
-
                 <div className="mt-4">
                     <p className="font-bold text-yellow-400">Rating: {data.rating} ⭐</p>
                 </div>

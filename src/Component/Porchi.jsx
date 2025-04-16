@@ -17,7 +17,7 @@ const Porchi = () => {
           <Link to={`/cartDetail/${item._id}`} className="rounded-tl-[27px] bg-[#111213] relative min-w-[250px] h-[350px] py-4 px-5 rounded-[27px]" key={index}>
             <h1 className="text-4xl mt-2">{item.company}</h1>
             <h2 className="text-[#BABEC4] text-2xl font-light">{item.modelName}</h2>
-            <img src={item.carImage} className="mt-10 ml-2" alt={item.modelName} />
+            <img src={item.CarImage?.[0]} className="mt-10 ml-2" alt={item.modelName} />
             <div className="grid grid-cols-2 py-2">
               <div className="flex gap-2 justify-start items-center">
                 <img src={car.raceIcon} alt="Race Icon" />
